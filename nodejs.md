@@ -1,22 +1,22 @@
 # NodeJS Interview Questions
 
 ## Question 1
-Write a function called `printObjectKeys(object)` that prints an object's keys to the console. The function will be used the following way.
+Write a function called `printObjectKeys(obj)` that prints an object's keys to the console. The function will be used the following way.
 ```js
-const myObject = {
+const obj = {
   one: 1,
   two: 2,
   three: 3
 };
 
-printObjectKeys(myObject); // one, two, three
+printObjectKeys(obj); // one, two, three
 ```
 
 ## Question 2
 Write a function called `findChars(string, char)` that finds the index of all the matching characters and returns them in an array.
 This function should be case insensitive. The function will be used the following way.
 ```
-const str = 'the quick brOwn fox jumped over the lazy dog'
+const str = 'the quick brOwn fox jumped over the lazy dog';
 
 findChars(str, 'o'); // [12, 17, 27, 42]
 ```
@@ -40,9 +40,9 @@ Write a JavaScript object constructor that instantiates `Dog` with the propertie
 Below is an example of how `Dog` will be used.
 ```js
 const dog = new Dog('Fido', 'Bulldog');
-console.log('The dogs name is ' + dog.name);
-console.log('The dogs breed is ' + dog.breed);
-dog.bark();
+console.log("The dog's name is " + dog.name);
+console.log("The dog's breed is " + dog.breed);
+dog.bark(); // woof
 ```
 
 ## Question 5
