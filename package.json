@@ -1,0 +1,21 @@
+{
+  "name": "interview-questions",
+  "version": "0.1.0",
+  "description": "My favorite interview questions",
+  "scripts": {
+    "build": "mdpdf nodejs.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejamninja/interview-questions.git"
+  },
+  "author": "Jam Risser <jam@codejam.ninja> (https://codejam.ninja)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codejamninja/interview-questions/issues"
+  },
+  "homepage": "https://github.com/codejamninja/interview-questions",
+  "devDependencies": {
+    "mdpdf": "^1.7.0"
+  }
+}

@@ -13,39 +13,22 @@ printObjectKeys(obj); // one, two, three
 ```
 
 ## Question 2
-Write a function called `findChars(string, char)` that finds the index of all the matching characters and returns them in an array.
-This function should be case insensitive. The function will be used the following way.
-```
-const str = 'the quick brOwn fox jumped over the lazy dog';
-
-findChars(str, 'o'); // [12, 17, 27, 42]
-```
-
-## Question 3
 Write a function called `isArray(item)` that correctly detects a JavaScript array. The function will be used the following way.
 ```js
 const obj = {};
 const str = '';
 const num = 0;
 const array = [];
+const nothing = null;
 
 isArray(obj); // false
 isArray(str); // false
 isArray(num); // false
+isArray(nothing); // false
 isArray(array); // true
 ```
 
-## Question 4
-Write a JavaScript object constructor that instantiates `Dog` with the properties `name` and `breed`. It should also have a method `bark`.
-Below is an example of how `Dog` will be used.
-```js
-const dog = new Dog('Fido', 'Bulldog');
-console.log("The dog's name is " + dog.name);
-console.log("The dog's breed is " + dog.breed);
-dog.bark(); // woof
-```
-
-## Question 5
+## Question 3
 NodeJS has a `setTimeout(callback, time)` function that takes a callback for its first
 parameter and time in milliseconds for its second parameter. Below is an example of how
 this function is used.
@@ -61,27 +44,70 @@ setTimeoutAsync(5000).then(() => {
 });
 ```
 
+## Question 4
+Write a function that demonstrates a closure
+
+## Question 5
+Write a function called `removeAccount` that removes the account with the matching email.
+```
+const acounts = [{
+  email: 'email1@example.com',
+  password: '123'
+},
+{
+  email: 'email2@example.com',
+  password: 'abc'
+},
+{
+  email: 'email3@example.com',
+  password: 'ABC'
+}];
+
+removeAccount(acounts, 'email1@example.com');
+```
+
 ## Question 6
-Write a NodeJS file module that converts a string to upperCase. This module will be used the following way.
+Create an event emitter that emits an event called `stop`. Also, create an event listener that listens for the stop event you just created. The following code will get you started.
 ```js
-const upperCase = require('./upper-case.js');
-upperCase('Hello, world!'); // HELLO, WORLD!
+const events = require('events');
+const eventEmitter = new events.EventEmitter();
 ```
 
 ## Question 7
-Write express logic that sends `Hello, world!` as the body when a GET request is made to the route `/hello`.
+Rewrite the following code without nesting the `setTimeout` functions so that the second timeout starts after the first timeout is finished.
 ```js
-const express = require('express');
-
-const port = 3000;
-const app = express();
-
-// your express route logic code goes here
-
-app.listen(port, () => {
-  console.log('listening on port ' + port);
-});
+setTimeout(() => {
+  console.log(1);
+}, 2000);
+setTimeout(() => {
+  console.log(2);
+}, 1000);
 ```
 
 ## Question 8
-Write a function that demonstrates a closure
+write a function called `findchars(string, char)` that finds the index of all the matching characters and returns them in an array. this function should be case insensitive. the function will be used the following way.
+```
+const str = 'the quick brown fox jumped over the lazy dog';
+
+findchars(str, 'o'); // [12, 17, 27, 42]
+```
+
+## Question 9
+write a javascript object constructor that instantiates `dog` with the properties `name` and `breed`. it should also have a method `bark`. below is an example of how `dog` will be used.
+
+```js
+const dog = new dog('fido', 'bulldog');
+console.log("the dog's name is " + dog.name);
+console.log("the dog's breed is " + dog.breed);
+dog.bark(); // woof
+```
+
+## Question 10
+write a nodejs file module that converts a string to uppercase. this module will be used the following way.
+```js
+const uppercase = require('./upper-case.js');
+uppercase('hello, world!'); // hello, world!
+```
+
+## Question 11
+write a function that demonstrates a closure
